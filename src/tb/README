@@ -1,0 +1,10 @@
+Counter testbench mini-howto
+============================
+
+    $ make clean
+    rm -f tb.vcd tb.vvp
+    $ make
+    iverilog -otb.vvp -tvvp tb.v ../counter.v
+    vvp tb.vvp
+    VCD info: dumpfile tb.vcd opened for output.
+    $ gtkwave tb.vcd tb.gtkw

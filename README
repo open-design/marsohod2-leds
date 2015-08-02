@@ -1,0 +1,28 @@
+Simple LED demo project for Marsohod2 board
+===========================================
+
+1. Add Quartus II bin/ dir to the PATH, e.g.
+
+    $ export PATH=$PATH:/opt/altera/13.1/quartus/bin
+
+or change QUARTUS variable definition in make_project.sh
+
+
+2. Run make_project.sh
+
+    $ ./make_project.sh
+
+the proj/ dir will be created.
+
+
+3. Compile the project
+
+    $ cd proj
+    $ make marsohod2-leds.svf
+
+
+4. Upload bitstream (in marsohod2-leds.svf) to Marsohod2
+
+Use openocd (http://openocd.zylin.com/#/c/2890/1) or
+MBFTDI-SVF-Player (http://marsohod.org/index.php/prodmbftdi/menusvfplayer)
+for uploading.
