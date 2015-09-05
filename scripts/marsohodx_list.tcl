@@ -21,6 +21,8 @@ proc marsohodx_list { src } {
                     set_global_assignment -name QIP_FILE "$src/$trimmed"
                 } elseif { $ext == ".mif" } {
                     set_global_assignment -name MIF_FILE "$src/$trimmed"
+                } elseif { $ext == ".sdc" } {
+                    set_global_assignment -name SDC_FILE "$src/$trimmed"
                 } else {
                     puts "Error: Unknown or unhandled file type \"$ext\"."
                 }
