@@ -3,11 +3,4 @@
 # This file must be kept up-to-date. It is used when creating the project
 # hierarchy and when building the project.
 
-
-### Top-level
-Top.v
-
 counter.v
-
-### Clocks
-altpll/altpll0.qip

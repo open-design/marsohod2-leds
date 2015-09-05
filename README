@@ -1,4 +1,4 @@
-Simple LED demo project for Marsohod2 board
+Simple LED demo project for Marsohod boards
 ===========================================
 
 1. Add Quartus II bin/ dir to the PATH, e.g.
@@ -10,7 +10,11 @@ or change QUARTUS variable definition in make_project.sh
 
 2. Run make_project.sh
 
-    $ ./make_project.sh
+    $ ./make_project.sh <board> [<project dir>]
+
+E.g.
+
+    $ ./make_project.sh marsohod2
 
 the proj/ dir will be created.
 

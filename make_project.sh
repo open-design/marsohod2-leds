@@ -11,16 +11,34 @@
 #
 ###############################################################################
 
-PROJECT_NAME="marsohod2-leds"
+BOARDS=$(ls -1 boards)
 
-# Relative path to the (future) project directory
+if [ "$1" = "" -o ! -f "boards/$1/settings.tcl" ]; then
+	echo "Usage:"
+	echo "    make_project.sh <board> [<project dir>]"
+	echo
+	echo "Available boards:"
+	for i in $BOARDS; do
+		echo "  $i"
+	done
+	exit
+fi
+
+BOARD=$1
+
+PROJECT_NAME="marsohodx-leds"
+
+# Default relative path to the (future) project directory
 PROJECT_PATH=proj
+if [ "$2" != "" ]; then
+	PROJECT_PATH=$2
+fi
 
 # Relative path to the (existing) source directory
-SOURCE_PATH=src
+SOURCE_PATH=boards/$BOARD
 
 # Relative path and name of the project settings script
-SETTINGS_SCRIPT=scripts/settings.tcl
+SETTINGS_SCRIPT=$SOURCE_PATH/settings.tcl
 
 MAKEFILE_TEMPLATE=scripts/Makefile.template
 
