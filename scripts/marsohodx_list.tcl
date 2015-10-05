@@ -19,6 +19,8 @@ proc marsohodx_list { src } {
                     set_global_assignment -name VHDL_FILE "$src/$trimmed"
                 } elseif { $ext == ".qip" } {
                     set_global_assignment -name QIP_FILE "$src/$trimmed"
+                } elseif { $ext == ".sip" } {
+                    set_global_assignment -name SIP_FILE "$src/$trimmed"
                 } elseif { $ext == ".mif" } {
                     set_global_assignment -name MIF_FILE "$src/$trimmed"
                 } elseif { $ext == ".sdc" } {
