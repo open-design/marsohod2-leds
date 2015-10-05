@@ -32,9 +32,9 @@ set_global_assignment -name FLOW_ENABLE_IO_ASSIGNMENT_ANALYSIS ON
 
 set_location_assignment PIN_26 -to CLK100MHZ
 
-set_location_assignment PIN_83 -to LED[7]
-set_location_assignment PIN_80 -to LED[6]
-set_location_assignment PIN_81 -to LED[5]
+set_location_assignment PIN_81 -to LED[7]
+set_location_assignment PIN_82 -to LED[6]
+set_location_assignment PIN_83 -to LED[5]
 set_location_assignment PIN_84 -to LED[4]
 set_location_assignment PIN_85 -to LED[3]
 set_location_assignment PIN_86 -to LED[2]
